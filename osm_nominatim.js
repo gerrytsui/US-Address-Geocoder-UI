@@ -93,8 +93,6 @@ function setupfunctions(){ // this get call/overriden on checkboxes changes
       select: function(event, ui) {
         $("#latitude").val(ui.item.latitude);
         $("#longitude").val(ui.item.longitude);
-        //var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
-        //marker.setPosition(location);
         map.setZoomLevel(17);
         map.setCenter( { lat: ui.item.latitude , lng:ui.item.longitude}); // " location); map.setZoom(17);
 		map.removeShape( poi);
@@ -109,21 +107,13 @@ function setupfunctions(){ // this get call/overriden on checkboxes changes
 		   ui.item.latitude + "," + ui.item.longitude + 
 		   "&pois=pcenter," + ui.item.latitude + "," + ui.item.longitude +
 		   "&size=260,180&zoom=10'>");
-        //$('div.thumap').html("<img src='http://maps.googleapis.com/maps/api/staticmap?center=" + ui.item.latitude + "," + ui.item.longitude + 
-		//"&zoom=10&size=260x180&sensor=false&markers=size:mid%7C" +  ui.item.latitude + "," + ui.item.longitude + "&maptype=terrain'>");
       },
 	  //---------------------------candidate selection via autofocus, arrow keys
       focus: function(event, ui) {
-        //$("#latitude").val(ui.item.latitude);
-        //$("#longitude").val(ui.item.longitude);
-        //var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
-		//marker.setPosition(location);
 		$('div.thumap').html("<img src='http://www.mapquestapi.com/staticmap/v3/getmap?key=Fmjtd%7Cluu2nu6rnu%2C8w%3Do5-h08l0&center=" +
 		  ui.item.latitude + "," + ui.item.longitude + 
 		  "&pois=pcenter," + ui.item.latitude + "," + ui.item.longitude +
 		  "&size=260,180&zoom=14'>");
-		//$('div.thumap').html("<img src='http://maps.googleapis.com/maps/api/staticmap?center=" + ui.item.latitude + "," + ui.item.longitude +
-		//"&zoom=14&size=260x180&sensor=false&markers=size:mid%7C" +  ui.item.latitude + "," + ui.item.longitude + "'>");
       }
     });
   });
