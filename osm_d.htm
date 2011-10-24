@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Geocoding with OSM Nominatim, jQuery autocomplete</title>
+	<script src="http://www.mapquestapi.com/sdk/js/v7.0.s/mqa.toolkit.js?key=Fmjtd%7Cluu2nu6rnu%2C8w%3Do5-h08l0"></script>
+
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+	<link type="text/css" href="css/main_b.css" rel="stylesheet" />
+	<script type="text/javascript" src="osm_d.js"></script>
+
+  </head>
+  <body>
+    <table style="font-size: 14" >
+		<tr><td valign="top">
+			<table style="font-size: 14" valign="top">
+				<tr valign="top"><td>Geocoding using the <a href="http://wiki.openstreetmap.org/wiki/Nominatim" target="_blank">OSM Nominatim</a> engine<br>
+					 This version determines instant candidates<BR> base on the entire USA <b>map extent</b><br>
+                  <input type="checkbox" name="isAutoFocus" value="foobar" onclick="setupfunctions()">auto select top candidate(for preview)<br>
+                  <input type="checkbox" name="isUSA" value="foorbar" checked="checked" onclick="setupfunctions()">View Bias force to USA (not current view)<br>
+				</td></tr>
+				<tr ><td><label>Address: </label><br><input id="address" size="40" type="text"/></td></tr>
+				<tr><td><label>Latitude: </label> / <label>Longitude: </label> <br>
+					<input id="latitude" size="9" type="text"/> / <input id="longitude" size="9" type="text"/>
+				<!-- <br>Drag the marker to reverse geocode<br> -->
+ 				</td></tr>
+				<tr><td>
+				<div class="thumap"></div>
+				</td></tr>
+				
+			</table>
+		</td>
+		<td>
+    		<div id="map_canvas" style="width:600px; height:400px"></div><br/>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			Technical Documentations:<br>
+ 			&nbsp;- Google Map V3 <a href="http://code.google.com/apis/maps/documentation/javascript/reference.html#Geocoder" target="_blank">Geocoder</a> - <a href="http://code.google.com/apis/maps/documentation/geocoding/#Viewports" target="_blank">Viewport Biasing</A> <br>
+            &nbsp;- jQuery <a href="http://docs.jquery.com/UI/Autocomplete" target="_blank">autocomplete</a>
+		 </td><td>
+			<br> tested on all PC/Mac browser<br> as well as iPad2 and Honeycomb Android tablet.
+		</td>
+		</tr>
+	</table>
+
+  </body>
+</html>
