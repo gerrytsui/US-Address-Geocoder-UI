@@ -119,14 +119,14 @@ function setupfunctions(){ // this get call/overriden on checkboxes changes
 		map.addShape(poi);
 
 
-		$('div.thumap').html("<img src='http://www.mapquestapi.com/staticmap/v3/getmap?key=Fmjtd%7Cluu2nu6rnu%2C8w%3Do5-h08l0&center=" +
+		$('div.thumap').html("<img src='http://www.mapquestapi.com/staticmap/v4/getmap?key=Fmjtd%7Cluu2nu6rnu%2C8w%3Do5-h08l0&center=" +
 		   ui.item.latitude + "," + ui.item.longitude + 
 		   "&pois=pcenter," + ui.item.latitude + "," + ui.item.longitude +
 		   "&size=260,180&zoom=10'>");
       },
 	  //---------------------------candidate selection via autofocus, arrow keys
       focus: function(event, ui) {
-		$('div.thumap').html("<img src='http://www.mapquestapi.com/staticmap/v3/getmap?key=Fmjtd%7Cluu2nu6rnu%2C8w%3Do5-h08l0&center=" +
+		$('div.thumap').html("<img src='http://www.mapquestapi.com/staticmap/v4/getmap?key=Fmjtd%7Cluu2nu6rnu%2C8w%3Do5-h08l0&center=" +
 		  ui.item.latitude + "," + ui.item.longitude + 
 		  "&pois=pcenter," + ui.item.latitude + "," + ui.item.longitude +
 		  "&size=260,180&zoom=14'>");
